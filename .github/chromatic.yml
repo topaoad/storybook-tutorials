@@ -18,6 +18,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Publish to Chromatic
+        run: yarn chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
